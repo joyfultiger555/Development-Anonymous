@@ -1,4 +1,4 @@
-import politicianInfo from "/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/politician-info.json";
+import politicianInfo from "../politician-info.json";
 import {PoliticianItem} from "/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/components/PoliticianItem.js"
 import { useEffect, useState } from 'react';
 import CheckBox from '/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/components/CheckBox.js'
