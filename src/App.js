@@ -1,5 +1,3 @@
-
-import politicianInfo from "./assets/politician-info.json";
 import {PoliticianItem} from "./components/PoliticianItem.js"
 import { useEffect, useState } from 'react';
 import { Checkbox, Collapse } from 'antd';
