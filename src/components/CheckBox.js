@@ -1,4 +1,4 @@
-import "/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/App.css"
+import "../App.css"
 
 function CheckBox({partyFilter: applyPartyFilter, branchFilter: applyBranchFilter, removePartyFilter, removeBranchFilter}) {
     const handlePartyFilterChange = (event, party) => {
