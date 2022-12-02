@@ -1,5 +1,5 @@
 import politicianInfo from "../politician-info.json";
-import {PoliticianItem} from "/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/components/PoliticianItem.js"
+import {PoliticianItem} from "../components/PoliticianItem.js"
 import { useEffect, useState } from 'react';
 import CheckBox from '/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/components/CheckBox.js'
 import SortButton from '/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/components/SortButton.js'
