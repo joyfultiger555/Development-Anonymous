@@ -16,7 +16,6 @@ function CheckBox({partyFilter: applyPartyFilter, branchFilter: applyBranchFilte
             removeBranchFilter(branch)
         }
     }
-
     return (
         <div>
             <div className="sortPartyText">Filter by Party</div>
