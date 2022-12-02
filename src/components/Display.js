@@ -26,7 +26,16 @@ function Display() {
         setVote({...newVote});
         
     }
-
+    const removeVotes = (uid) => {
+        let newVote = politician;
+        if (newVote[uid]){
+          newVote[uid]-=1;
+        }
+        else{
+          newVote[uid] = 0;
+        }
+        setVote({...newVote});
+    }
     function partyFilter(party) {
         setPartyFilters([...partyFilters, party])
     }
@@ -81,7 +90,7 @@ function Display() {
                 </div>
                 <div class="App">
                 {filteredArray.map((item, index) => {
-                    return(<PoliticianItem key={index} updateVotes={updateVotes} item={item} index={index} vote={vote} setVote={setVote} />)
+                    return(<PoliticianItem key={index} updateVotes={updateVotes} item={item} index={index} vote={vote} setVote={setVote} removeVotes={removeVotes}/>)
                 })}
                 </div>
             </div>
