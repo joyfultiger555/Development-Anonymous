@@ -1,4 +1,4 @@
-import "/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/App.css"
+import "../App.css"
 function SortButton({sortFunction}) {
     return (
         <div className="sort">
