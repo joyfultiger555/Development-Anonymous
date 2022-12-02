@@ -1,4 +1,4 @@
-import Display from '/Users/noahatanda/Desktop/uiux/Development-Anonymous/src/components/Display.js'
+import Display from './components/Display'
 function App() {
   return (
     <Display/>
