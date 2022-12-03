@@ -2,7 +2,7 @@ import '../App.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup  from 'react-bootstrap/ListGroup';
 
-export function PoliticianItem({item, index, setVotes, votes, updateVotes,}){
+export function PoliticianItem({item, index, setVotes, votes, updateVotes, removeVotes}){
     return (
         <Card class="card" border="dark" style={{width: '18rem'}}>
             <Card.Body>
@@ -16,6 +16,7 @@ export function PoliticianItem({item, index, setVotes, votes, updateVotes,}){
                     <ListGroup.Item>{item.votes}</ListGroup.Item>
                 </ListGroup>
                 <button onClick={()=>{updateVotes(index); setVotes(votes+item.votes)}}>Vote</button>
+                <button onClick={()=>{removeVotes(index); setVotes(votes-item.votes)}}>Remove Vote</button>
             </Card.Body>
         </Card>
     );
