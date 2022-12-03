@@ -60,23 +60,23 @@ function Display() {
         return branchFilters.includes(item.branch);
     }
     function handleSort() {
-        filteredArray = filteredArray.sort((a,b) => sortFunction(a,b));
+        filteredArray = filteredArray.sort((a,b) => sortFunc(a,b));
     }
-    const sortFunction = (a,b) => {
+    const sortFunc = (a,b) => {
         return a.age - b.age
     }
     const randomSort = (a,b) => {
         return -1;
     }
-    const sortChange = (a,b) => {
+    const change = (a,b) => {
         if (sort) {
-            return sortFunction(a,b);
+            return sortFunc(a,b);
         } else {
             randomSort(a,b);
         }
     }
     const filteredArray = politicianInfo.filter(item => filterByParty(item)).filter(item => filterByBranch(item));
-    filteredArray.sort((a,b) => sortChange(a,b))
+    filteredArray.sort((a,b) => change(a,b))
 
     return (
         <div>
