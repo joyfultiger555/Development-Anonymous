@@ -1,7 +1,7 @@
 import "../App.css"
 
 function CheckBox({partyFilter: applyPartyFilter, branchFilter: applyBranchFilter, removePartyFilter, removeBranchFilter}) {
-    const handlePartyFilterChange = (event, party) => {
+    const handlePartyFilter = (event, party) => {
         if (event.target.checked == true) {
             applyPartyFilter(party)
         } else {
@@ -9,7 +9,7 @@ function CheckBox({partyFilter: applyPartyFilter, branchFilter: applyBranchFilte
         }
     }
 
-    const handleBranchFilterChange = (event, branch) => {
+    const handleBranchFilter = (event, branch) => {
         if (event.target.checked === true) {
             applyBranchFilter(branch)
         } else {
@@ -21,26 +21,26 @@ function CheckBox({partyFilter: applyPartyFilter, branchFilter: applyBranchFilte
             <div className="sortPartyText">Filter by Party</div>
             <div class="party">
                 <label>
-                    <input type="checkbox" onChange={event => handlePartyFilterChange(event, "Democrat")}/>
+                    <input type="checkbox" onChange={event => handlePartyFilter(event, "Democrat")}/>
                     Democrat
                 </label>
                 <label>
-                    <input type="checkbox" value="republican" onChange={event => handlePartyFilterChange(event, "Republican")}/>
+                    <input type="checkbox" value="republican" onChange={event => handlePartyFilter(event, "Republican")}/>
                     Republican
                 </label>
             </div>
             <div className="sortBranchText">Filter by Branch</div>
             <div class="branch">
                 <label>
-                    <input type="checkbox" onChange={event => handleBranchFilterChange(event, "Executive")}/>
+                    <input type="checkbox" onChange={event => handleBranchFilter(event, "Executive")}/>
                     Executive
                 </label>
                 <label>
-                    <input type="checkbox" onChange={event => handleBranchFilterChange(event, "Legislative")}/>
+                    <input type="checkbox" onChange={event => handleBranchFilter(event, "Legislative")}/>
                     Legislative
                 </label>
                 <label>
-                    <input type="checkbox" onChange={event => handleBranchFilterChange(event, "Judicial")}/>
+                    <input type="checkbox" onChange={event => handleBranchFilter(event, "Judicial")}/>
                     Judicial
                 </label>
             </div>
